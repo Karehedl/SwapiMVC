@@ -1,16 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model string
+    @{
+        ViewData["Title"] = "Home Page";
 
-    Random rand = new Random();
-    string[] names = new[] {"Justin", "Alex", "Bri", "Kate"};
-   
-    string name = names[rand.Next(0, names.Length)];
-}
+        @* Random rand = new Random();
+        string[] names = new[] {"Justin", "Alex", "Bri", "Kate"};
+    
+        string name = names[rand.Next(0, names.Length)]; *@
+    }
 
 @* an @ symbol in front of the opening curly brace on line 1. This is how Razor, the name for this markup syntax, enables you to write C# in the views. *@
 @* Comments also look different!*@
 
 <div class="text-center">
-    <h1 class="display-4">Welcome @name</h1>
+    <h1 class="display-4">Welcome @Model</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
