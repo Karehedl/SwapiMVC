@@ -1,4 +1,9 @@
-﻿@model ErrorViewModel
+﻿@* How ErrorViewModel Shares Data:
+    Line 1 has the content @model ErrorViewModel which is declaring that this view uses the ErrorViewModel as the expected model type.
+    Line 9 is our first use of our model instance, referenced as the property Model. Declaration of type is @model, use is Model.
+    Line 12 we also see the Model being referenced where it displays the RequestId to the view. *@
+
+@model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
 }
